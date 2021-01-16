@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { deserialize } from '../../../finder/nodejs/lib/deserializer';
+import { deserialize } from '../../finder/nodejs/lib/deserializer';
 import { FlutterDriver } from '../driver';
 import { log } from '../logger';
 import { IsolateSocket } from './isolate_socket';

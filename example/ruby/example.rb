@@ -55,5 +55,6 @@ class ExampleTests < Minitest::Test
     # @driver.execute_script 'flutter:getRenderObjectDiagnostics', text_finder, { includeProperties: true }
 
     assert_equal 'ok', @driver.execute_script('flutter:checkHealth', {})
+    @driver.quit
   end
 end

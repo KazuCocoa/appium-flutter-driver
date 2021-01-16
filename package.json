@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/truongsinh/appium-flutter-driver.git"
   },
-  "main": "./build/driver/lib/driver.js",
+  "main": "./build/lib/driver.js",
   "bin": {},
   "directories": {
     "lib": "lib"
@@ -21,7 +21,6 @@
     "build"
   ],
   "scripts": {
-    "prepublishOnly": "cp ../README.md ../LICENSE ./",
     "prepare": "npm run clean && npm run compile",
     "test": "echo no test",
     "compile": "tsc",
@@ -38,6 +37,6 @@
     "appium-uiautomator2-driver": "^1.35.1",
     "appium-xcuitest-driver": "^3.17.0",
     "rpc-websockets": "^5.1.1",
-    "appium-adb": "^8.8.0"
+    "appium-adb": "git+https://github.com/KazuCocoa/appium-adb#03b53a7e531518da24ee16fc09f7c2d7d7945923"
   }
 }
