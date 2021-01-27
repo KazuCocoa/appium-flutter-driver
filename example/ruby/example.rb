@@ -6,23 +6,28 @@ require 'minitest/autorun'
 class ExampleTests < Minitest::Test
   include ::Appium::Flutter::Finder
 
-  IOS_CAPS = {
+  caps = {
     caps: {
       platformName: 'iOS',
       automationName: 'flutter',
+      udid: 'f4da227d7314251e8ed0081590cd813d03064efc',
       platformVersion: '12.4',
       deviceName: 'iPhone 8',
-      app: "#{Dir.pwd}/../app/app/Runner.zip"
+      fullReset: false,
+      noReset: true,
+      webDriverAgentUrl: 'http://192.168.4.45:8100',
+      bundleId: 'com.kazucocoa.helloWorld'
+      # app: "#{Dir.pwd}/../app/app/Runner.zip"
     },
     appium_lib: {
       export_session: true,
       wait_timeout: 20,
       wait_interval: 1
     }
-  }.freeze
+  }
 
   def test_run_example_ios_scenario
-    @core = ::Appium::Core.for(IOS_CAPS)
+    @core = ::Appium::Core.for(caps)
     @driver = @core.start_driver
 
 
